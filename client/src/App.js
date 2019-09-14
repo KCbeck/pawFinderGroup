@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Form from "./components/form.js"
 import logo from "./logo.png";
 import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 class App extends Component {
