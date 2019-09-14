@@ -15,4 +15,4 @@ class navbar extends Component{
     }
 }
 
-export default petCard;
+export default navbar;

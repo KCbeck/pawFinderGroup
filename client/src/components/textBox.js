@@ -12,4 +12,4 @@ class textBox extends Component{
     };
 }
 
-export default petCard;
+export default textBox;
