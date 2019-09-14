@@ -1,20 +1,23 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+import Form from "./components/form.js"
+import logo from "./logo.png";
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <div id="App">
+        <div id="AppHeader">
+          <img src={logo} id="AppLogo" alt="logo" />
+          <h2>PawFinder</h2>
+          <p>Swipe left until you find a Pet you like then swipe right!</p>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Form />
+        <div id="contentDiv"></div>
+        <div id="footer"></div>
       </div>
     );
   }
