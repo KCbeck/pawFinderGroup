@@ -15,7 +15,6 @@ class App extends Component {
           <h2>PawFinder</h2>
           <p>Swipe left until you find a Pet you like then swipe right!</p>
         </div>
-        <Form />
         <div id="contentDiv"></div>
         <div id="footer"></div>
       </div>
