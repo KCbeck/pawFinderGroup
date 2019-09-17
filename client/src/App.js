@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Form from "./components/form.js"
-import logo from "./logo.png";
+import Navbar from "./components/Navbar.jsx"
+// import logo from "./logo.png";
 import "./App.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -10,13 +10,9 @@ class App extends Component {
   render() {
     return (
       <div id="App">
-        <div id="AppHeader">
-          <img src={logo} id="AppLogo" alt="logo" />
-          <h2>PawFinder</h2>
-          <p>Swipe left until you find a Pet you like then swipe right!</p>
-        </div>
+        <Navbar />
         <div id="contentDiv"></div>
-        <div id="footer"></div>
+
       </div>
     );
   }
