@@ -7,10 +7,7 @@
     "chai": "^4.2.0",
     "mocha": "^6.2.0",
     "react": "^16.6.3",
-<<<<<<< HEAD
-=======
     "react-bootstrap": "^1.0.0-beta.12",
->>>>>>> 5c5165cf102064cb4bd6d430d20f3d8441e142f4
     "react-dom": "^16.6.3",
     "react-scripts": "^2.1.1"
   },
