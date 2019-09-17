@@ -1,8 +1,8 @@
-// import React from "react";
+import React from "react";
 import { Container, Row, Col, button } from 'react-bootstrap';
-
 import React, {Component} from 'react';
-// import './form.css';
+
+
 // ​
 // ​
 class FormPage extends Component {
