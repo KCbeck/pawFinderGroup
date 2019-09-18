@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import FormPage from "./components/signUp.js"
 import logo from "./logo.png";
 import "./App.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 
@@ -17,7 +17,7 @@ class App extends Component {
           <p>Swipe left until you find a Pet you like then swipe right!</p>
         </div>
         <div id="contentDiv">
-
+        <FormPage />
         </div>
         <div id="footer"></div>
       </div>
