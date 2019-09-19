@@ -1,7 +1,6 @@
 
 // import React from "react";
 import { Container, Row, Col, Button } from 'react-bootstrap';
-
 import React, {Component} from 'react';
 import "./signUp.css";
 // ​
@@ -40,6 +39,8 @@ class FormPage extends Component {
         zipCode: ""
       });
     };
+
+    
 
     render() {
       // Notice how each input has a `value`, `name`, and `onChange` prop
