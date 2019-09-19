@@ -1,4 +1,4 @@
 + react-dom@16.9.0
-added 2 packages and audited 3278 packages in 5.323s
-found 0 vulnerabilities
-
+added 2 packages and audited 3680 packages in 12.572s
+found 4 vulnerabilities (1 low, 2 moderate, 1 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
