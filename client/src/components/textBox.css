@@ -1,0 +1,11 @@
+#textbox { 
+    align-content: center;
+    text-align:center;
+    padding-top: 4%;
+    color: red;
+    font-weight: bold
+  }
+
+  p {
+      font-size: 155%
+  }

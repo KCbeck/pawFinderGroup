@@ -19,7 +19,11 @@
   padding-bottom: 80px;
 }
 #appdescription{
-  padding-top: 4%
+  padding-top: 4%;
+  text-align: center;
+  color: green;
+  font-weight: bolder;
+  font-size: 155%
 }
 #roolettBackground {
   margin-top: 0px;
@@ -36,7 +40,7 @@
   align-content: center
 }
 
-p { 
+p h1 { 
   align-content: center;
   text-align:center;
 
