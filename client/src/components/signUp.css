@@ -1,3 +1,14 @@
+@media all and (min-width: 480px) {
+    .FormPage {
+      padding: 60px 0;
+    }
+  
+    .FormPage form {
+      margin: 0 auto;
+      max-width: 800px;
+    }
+  }
+
 form {
     width: 99%;
 }

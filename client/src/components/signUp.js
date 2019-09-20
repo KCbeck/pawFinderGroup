@@ -45,66 +45,68 @@ class FormPage extends Component {
     render() {
       // Notice how each input has a `value`, `name`, and `onChange` prop
       return (
-        <Container>
-          <Row>
-            <Col md="12">
-            Hello {this.state.firstName} {this.state.lastName}
-              <form className="form">
-                <input class="input"
-                  value={this.state.firstName}
-                  name="firstName"
-                  onChange={this.handleInputChange}
-                  type="text"
-                  placeholder="First Name"
-               />
-               <div class="gap">
-               </div>
-                <input
-                  value={this.state.lastName}
-                  name="lastName"
-                  onChange={this.handleInputChange}
-                  type="text"
-                  placeholder="Last Name"
-                />
-                 <div class="gap">
-               </div>
-                <input
-                  value={this.state.email}
-                  name="email"
-                  onChange={this.handleInputChange}
-                  type= "email"
-                  pattern=".+@globex.com"
-                  size="30"
-                  placeholder="email@email.com"
-                  required
+        <div className="FormPage">
+          <Container>
+            <Row>
+              <Col md="12">
+              Hello {this.state.firstName} {this.state.lastName}
+                <form className="form">
+                  <input class="input"
+                    value={this.state.firstName}
+                    name="firstName"
+                    onChange={this.handleInputChange}
+                    type="text"
+                    placeholder="First Name"
                 />
                 <div class="gap">
-               </div>
-                <input
-                  value={this.state.zipCode}
-                  name="zipCode"
-                  onChange={this.handleInputChange}
-                  type="number"
-                  placeholder="Zipcode"
-                />
-               <div class="gap">
-               </div>
-                <input
-                  value={this.state.password}
-                  name="password"
-                  onChange={this.handleInputChange}
-                  type="password"
-                  placeholder="pa$$word"
-                />
+                </div>
+                  <input
+                    value={this.state.lastName}
+                    name="lastName"
+                    onChange={this.handleInputChange}
+                    type="text"
+                    placeholder="Last Name"
+                  />
+                  <div class="gap">
+                </div>
+                  <input
+                    value={this.state.email}
+                    name="email"
+                    onChange={this.handleInputChange}
+                    type= "email"
+                    pattern=".+@globex.com"
+                    size="30"
+                    placeholder="email@email.com"
+                    required
+                  />
+                  <div class="gap">
+                </div>
+                  <input
+                    value={this.state.zipCode}
+                    name="zipCode"
+                    onChange={this.handleInputChange}
+                    type="number"
+                    placeholder="Zipcode"
+                  />
                 <div class="gap">
-               </div>
-                  <Button onClick={this.handleFormSubmit} >Submit</Button>
-                  {/* incorporate <Link to = "/cards">Submit</Limk> into button */}
-                </form>
-                {/* <Link to = "/logIn">Already a Member? LOGIN HERE</Link> */}
-             </Col>
-          </Row>
-        </Container>
+                </div>
+                  <input
+                    value={this.state.password}
+                    name="password"
+                    onChange={this.handleInputChange}
+                    type="password"
+                    placeholder="pa$$word"
+                  />
+                  <div class="gap">
+                </div>
+                    <Button onClick={this.handleFormSubmit} >Submit</Button>
+                    {/* incorporate <Link to = "/cards">Submit</Limk> into button */}
+                  </form>
+                  {/* <Link to = "/logIn">Already a Member? LOGIN HERE</Link> */}
+              </Col>
+            </Row>
+          </Container>
+        </div>
       );
     }
   }

@@ -5,8 +5,7 @@ import roolettBackground from "./roolettBackground.jpg";
 import "./App.css";
 import FormPage from "./components/signUp.js";
 import textBox from './components/textBox.js';
-
-// import logIn from './components/logIn.js';
+import LogIn from './components/logIn.js';
 // import header from './components/header.js';
 // import Footer from './components/Footer.js';
 // import Contact from './components/Contact';
@@ -28,6 +27,7 @@ class App extends Component {
           <p id="appdescription">An app for the indecisive would-be pet owner</p>
           <p>Swipe left until you find a Pet you like- then swipe right!</p>
         </div>
+        <LogIn></LogIn>
         <BrowserRouter>
           <div className="contentDiv">
           <Route exact path="/" component={ FormPage } />
