@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route } from 'react-router-dom';
 import logo from "./logo.png";
+import roolettBackground from "./roolettBackground.jpg";
 import "./App.css";
-
-import FormPage from "./components/signUp.js"
+import FormPage from "./components/signUp.js";
 import textBox from './components/textBox.js';
+
 // import logIn from './components/logIn.js';
 // import header from './components/header.js';
 // import Footer from './components/Footer.js';
@@ -20,10 +21,11 @@ class App extends Component {
       <div id="App">
         <div id="AppHeader">
           <img src={logo} id="AppLogo" alt="logo" />
-          <h2>PetRoolette</h2>
+          <img src={roolettBackground} id="roolettBackground" alt="roolettBackground" />
+          <h2 id="PRheader">PetRoolette</h2>
         </div>
         <div>
-          <p>An app for the indecisive would-be pet owner</p>
+          <p id="appdescription">An app for the indecisive would-be pet owner</p>
           <p>Swipe left until you find a Pet you like- then swipe right!</p>
         </div>
         <BrowserRouter>
