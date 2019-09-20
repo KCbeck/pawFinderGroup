@@ -10,10 +10,6 @@ import logIn from './components/logIn';
 // import Footer from './components/Footer.js';
 // import Contact from './components/Contact';
 
-
-
-
-
 class App extends Component {
   render() {
     return (
@@ -29,10 +25,10 @@ class App extends Component {
         </div>
         <BrowserRouter>
           <div className="contentDiv">
-          <Route exact path="/" component={ FormPage } />
+            <Route exact path="/" component={ FormPage } />
           {/* <Route exact path="/pets" component= { card } /> */}
-          <Route exact path="/login" component= { logIn } />
-          <Route exact path="/confirmation" component= { textBox } />
+            <Route exact path="/login" component= { logIn } />
+            <Route exact path="/confirmation" component= { textBox } />
           </div>
         </BrowserRouter>
       </div>
