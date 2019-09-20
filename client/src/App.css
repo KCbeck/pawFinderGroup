@@ -19,7 +19,7 @@
   padding-bottom: 80px;
 }
 #appdescription{
-  padding-top: 20px;
+  padding-top: 4%
 }
 #roolettBackground {
   margin-top: 0px;
@@ -36,9 +36,11 @@
   align-content: center
 }
 
-/* #footer{
-  
-} */
+p { 
+  align-content: center;
+  text-align:center;
+
+}
 
 
 

@@ -19,8 +19,8 @@ class App extends Component {
           <img src={roolettBackground} id="roolettBackground" alt="roolettBackground" />
           <h2 id="PRheader">PetRoolette</h2>
         </div>
-        <div>
-          <p id="appdescription">An app for the indecisive would-be pet owner</p>
+        <div id="appdescription">
+          <p >An app for the indecisive would-be pet owner</p>
           <p>Swipe left until you find a Pet you like- then swipe right!</p>
         </div>
         <BrowserRouter>
