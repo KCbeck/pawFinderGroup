@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./logIn.css";
 
-export default class Login extends Component {
+ class logIn extends Component {
   constructor(props) {
     super(props);
 
@@ -60,3 +60,5 @@ export default class Login extends Component {
     );
   }
 }
+
+export default logIn

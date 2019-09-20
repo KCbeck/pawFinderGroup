@@ -5,14 +5,10 @@ import roolettBackground from "./roolettBackground.jpg";
 import "./App.css";
 import FormPage from "./components/signUp.js";
 import textBox from './components/textBox.js';
-import LogIn from './components/logIn.js';
-// import header from './components/header.js';
+import logIn from './components/logIn';
+// import SimpleCarousel from "./components/Swipeable";
 // import Footer from './components/Footer.js';
 // import Contact from './components/Contact';
-
-
-
-
 
 class App extends Component {
   render() {
@@ -27,16 +23,14 @@ class App extends Component {
           <p id="appdescription">An app for the indecisive would-be pet owner</p>
           <p>Swipe left until you find a Pet you like- then swipe right!</p>
         </div>
-        <LogIn></LogIn>
         <BrowserRouter>
           <div className="contentDiv">
-          <Route exact path="/" component={ FormPage } />
+            <Route exact path="/" component={ FormPage } />
           {/* <Route exact path="/pets" component= { card } /> */}
-          {/* <Route exact path="/login" component= { logIn } /> */}
-          <Route exact path="/confirmation" component= { textBox } />
+            <Route exact path="/login" component= { logIn } />
+            <Route exact path="/confirmation" component= { textBox } />
           </div>
         </BrowserRouter>
-        <div id="footer"></div>
       </div>
     );
   }
