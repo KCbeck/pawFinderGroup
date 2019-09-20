@@ -42,8 +42,9 @@
   
   .form-light .footer {
     border-bottom-left-radius: .3rem;
-=======
-.form-light .font-small {
+  }
+
+  .form-light .font-small {
     font-size: 0.8rem; }
   
   .form-light [type="radio"] + label,
