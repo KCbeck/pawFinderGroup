@@ -5,23 +5,40 @@
 #AppLogo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
+  position:absolute;
+  margin-top: 45px;
+  margin-left: 0px;
 }
 
 #AppHeader {
   background-color: green;
-  height: 150px;
+  height: 200px;
   padding: 20px;
   color: white;
-  margin: 0;
+  margin-top: -18px;
+  padding-bottom: 80px;
+}
+#appdescription{
+  padding-top: 20px;
+}
+#roolettBackground {
+  margin-top: 0px;
+  margin-left: -20px;
+  height: 180px;
+}
+#PRheader{
+  margin-left: 400px;
+  margin-top: -158px;
+  Font-size: 170px;
 }
 
 #contentDiv{
   align-content: center
 }
 
-#footer{
+/* #footer{
   
-}
+} */
 
 
 
