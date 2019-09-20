@@ -97,8 +97,10 @@ class FormPage extends Component {
                 />
                 <div class="gap">
                </div>
-                  <Button onClick={this.handleFormSubmit}>Submit</Button>
+                  <Button onClick={this.handleFormSubmit} >Submit</Button>
+                  {/* incorporate <Link to = "/cards">Submit</Limk> into button */}
                 </form>
+                {/* <Link to = "/logIn">Already a Member? LOGIN HERE</Link> */}
              </Col>
           </Row>
         </Container>
