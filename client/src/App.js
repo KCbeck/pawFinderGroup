@@ -8,9 +8,7 @@ import textBox from './components/textBox.js';
 import logIn from './components/logIn';
 import axios from 'axios';
 import PetCard from './components/card.js';
-// import SimpleCarousel from "./components/Swipeable";
-// import Footer from './components/Footer.js';
-// import Contact from './components/Contact';
+
 
 class App extends Component {
 
@@ -51,7 +49,6 @@ cardStyle = {
         <BrowserRouter>
           <div className="contentDiv">
             <Route exact path="/" component={ FormPage } />
-          {/* <Route exact path="/pets" component= { card } /> */}
             <Route exact path="/login" component= { logIn } />
             <Route exact path="/confirmation" component= { textBox } />
             <div style={this.rowStyle}> 
@@ -62,9 +59,6 @@ cardStyle = {
               
               )}
             </div>
-
-            {/* <PetCard>
-            </PetCard> */}
           </div>
         </BrowserRouter>
       </div>

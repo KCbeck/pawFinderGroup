@@ -20,6 +20,3 @@ return (
    )
 };
 export default PetCard;
-
-
-// image={animal.url} species={animal.species} size={animal.size} gender={animal.gender} breed={animal.breeds.primary
