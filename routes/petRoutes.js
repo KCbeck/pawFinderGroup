@@ -1,25 +1,10 @@
-const express = require("express");
-const path = require("path");
-const PORT = process.env.PORT || 3001;
-const app = express();
-var axios = require('axios');
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
-
-
-// const routes = require("./routes");
-// app.use(routes);
-
-
-// var router = express.Router();
-
-// var petRoutes = require("./routes/petRoutes");
-// router.get('/api/test', petRoutes);
+var express = require('express');
+var router = express.Router();
 // var request = require('request');
+var axios = require('axios');
 
-app.get('/api/test', function(req, res) {
+
+router.get('/', function(req, res) {
    console.log("made it into pet routes")
    // return res.json({name:"Ron"})
    axios.request({
@@ -45,8 +30,7 @@ app.get('/api/test', function(req, res) {
        axios.get("https://api.petfinder.com/v2/animals", { headers: { Authorization: 'Bearer ' + response.data.access_token} })
        .then(response => {
            // If request is good...
-           console.log(response.data)
-           res.json(response.data);
+           res.send("hello");
        })
        // axios.get({
        //     url:"https://api.petfinder.com/v2/animals",
@@ -63,16 +47,4 @@ app.get('/api/test', function(req, res) {
        console.log(error);
    })
 })
-// module.e
-
-// var apiRoutes = require('./routes/api-routes')
-// app.use(apiRoutes);
-// Send every request to the React app
-// Define any API routes before this runs
-app.get("*", function(request, response) {
-  response.sendFile(path.join(__dirname, "./client/public/index.html"));
-});
-
-app.listen(PORT, function() {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
-});
+module.exports = router;

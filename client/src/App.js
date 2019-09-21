@@ -6,12 +6,16 @@ import "./App.css";
 import FormPage from "./components/signUp.js";
 import textBox from './components/textBox.js';
 import logIn from './components/logIn';
+import axios from 'axios';
 // import SimpleCarousel from "./components/Swipeable";
 // import Footer from './components/Footer.js';
 // import Contact from './components/Contact';
 
 class App extends Component {
-  render() {
+componentDidMount = () => {
+  axios.get('/api/test').then(response => console.log(response.data))
+}
+   render() {
     return (
       <div id="App">
         <div id="AppHeader">
