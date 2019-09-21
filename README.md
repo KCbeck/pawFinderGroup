@@ -24,7 +24,7 @@ this will start development server
 
 Now you are all set
 
-**App is still in production**
+**App is still in development**
 
 Next steps are:
 
