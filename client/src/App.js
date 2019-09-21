@@ -7,13 +7,34 @@ import FormPage from "./components/signUp.js";
 import textBox from './components/textBox.js';
 import logIn from './components/logIn';
 import axios from 'axios';
+import PetCard from './components/card.js';
 // import SimpleCarousel from "./components/Swipeable";
 // import Footer from './components/Footer.js';
 // import Contact from './components/Contact';
 
 class App extends Component {
+
+state = {
+  animals: []
+}
+
 componentDidMount = () => {
-  axios.get('/api/test').then(response => console.log(response.data))
+  axios.get('/api/test').then(response => {
+    this.setState({animals: response.data.animals})
+    console.log(response.data.animals)
+  })
+}
+
+rowStyle = {
+  display: 'grid',
+  width: '100vw',
+  gridTemplateColumns: '25% 25% 25% 25%' 
+
+}
+
+cardStyle = {
+  width: '25vw'
+
 }
    render() {
     return (
@@ -33,6 +54,17 @@ componentDidMount = () => {
           {/* <Route exact path="/pets" component= { card } /> */}
             <Route exact path="/login" component= { logIn } />
             <Route exact path="/confirmation" component= { textBox } />
+            <div style={this.rowStyle}> 
+              {this.state.animals.map(animal => 
+                <div >
+                  <div style={this.cardStyle} className="col-lg-3"><PetCard name={animal.name} image={animal.photos[0] ? animal.photos[0].small : ''} species={animal.species} size={animal.size} gender={animal.gender} breed={animal.breeds.primary} /></div>
+                </div>
+              
+              )}
+            </div>
+
+            {/* <PetCard>
+            </PetCard> */}
           </div>
         </BrowserRouter>
       </div>
