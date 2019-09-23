@@ -51,7 +51,7 @@ render() {
                 <Navbar fluid collapseOnSelect>
                 <div>
                   <Navbar.Brand>
-                    <Link to="/">PetRoolett</Link>
+                    <Link to="/">PetRoolette</Link>
                     </Navbar.Brand> 
                   <Navbar.Collapse>
                     <Nav pullRight>
