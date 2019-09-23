@@ -8,6 +8,7 @@ import textBox from './components/textBox.js';
 import logIn from './components/logIn';
 import PetCard from './components/card.js';
 import axios from 'axios';
+import ScrollToTop from "./ScrollToTop.js";
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import Home from "./components/Home.js"
 import "./Routes"
@@ -39,6 +40,7 @@ cardStyle = {
 render() {
   return (
     <BrowserRouter>
+      <ScrollToTop>
         <div id="App">
             <div id="AppHeader">
               <img src={logo} id="AppLogo" alt="logo" />
@@ -76,6 +78,7 @@ render() {
               )}
             </div>
         </div>
+      </ScrollToTop>
     </BrowserRouter>
   );
 }

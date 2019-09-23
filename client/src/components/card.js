@@ -1,5 +1,8 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
+
+
+
 const PetCard = (props) => {
 return (
 <Card style={{ width: '18rem' }}>
