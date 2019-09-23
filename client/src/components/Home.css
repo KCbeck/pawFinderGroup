@@ -6,9 +6,10 @@
   .Home .lander h1 {
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
+    color: darkred;
   }
   
   .Home .lander p {
-    color: #999;
+    color: darkred;
   }
   

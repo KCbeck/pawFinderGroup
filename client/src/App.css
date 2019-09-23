@@ -20,9 +20,10 @@
 
 #AppHeader {
   background-color: green;
+  margin-right: 0;
   height: 200px;
   padding: 20px;
-  color: white;
+  color: darkred;
   margin-top: -18px;
   padding-bottom: 80px;
 }
@@ -45,13 +46,13 @@
 }
 
 #contentDiv{
-  align-content: center
+  align-content: center;
+ 
 }
 
 p h1 { 
   align-content: center;
   text-align:center;
-
 }
 
 
