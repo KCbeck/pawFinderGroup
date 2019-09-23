@@ -61,4 +61,4 @@ import "./logIn.css";
   }
 }
 
-export default logIn
+export default logIn;

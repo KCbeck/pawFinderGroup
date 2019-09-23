@@ -1,22 +1,42 @@
-import React from 'react';
-import { Card } from 'react-bootstrap';
-const PetCard = (props) => {
+import React, { Component } from "react";
+import axios from 'axios';
+// import { Card } from 'react-bootstrap';
+import "./card.css"
+
+class PetCard extends Component {
+  state = {
+    animals: []
+  }
+  
+  componentDidMount = () => {
+    axios.get('/api/test').then(response => {
+      this.setState({animals: response.data.animals})
+      console.log(response.data.animals)
+    })
+  }
+  
+  rowStyle = {
+    display: 'grid',
+    width: '100vw',
+    gridTemplateColumns: '25% 25% 25% 25%' 
+  
+  }
+  
+  cardStyle = {
+    width: '25vw'
+  
+  }
+
+  render() {
 return (
-<Card style={{ width: '18rem' }}>
- <Card.Img variant="top" src={props.image}
-/>
- <Card.Body>
-   <Card.Title>{props.name}</Card.Title>
-   <Card.Text>
-   <p>{props.species}</p>
-   <p>{props.size}</p>
-   <p>{props.gender}</p>
-   <p>{props.breed}</p>
-
-
-   </Card.Text>
- </Card.Body>
-</Card>
+  <div style={this.rowStyle}> 
+                        {this.state.animals.map(animal => 
+                          <div >
+                            <div style={this.cardStyle} className="col-lg-3"><PetCard name={animal.name} image={animal.photos[0] ? animal.photos[0].small : ''} species={animal.species} size={animal.size} gender={animal.gender} breed={animal.breeds.primary} /></div>
+                          </div>
+                        )}
+                      </div>
    )
-};
-export default PetCard;
+}; 
+}
+export default PetCard

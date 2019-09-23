@@ -7,7 +7,7 @@ export default class Home extends Component {
       <div className="Home">
         <div className="lander">
           <h1>PetRoolette</h1>
-          <p>Pet App</p>
+          <p>Pet Adoption App for the indecisive Pet Owner</p>
         </div>
       </div>
     );

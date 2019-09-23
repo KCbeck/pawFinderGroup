@@ -7,7 +7,6 @@ import FormPage from "./components/signUp.js";
 import textBox from './components/textBox.js';
 import logIn from './components/logIn';
 import PetCard from './components/card.js';
-import axios from 'axios';
 import {  BrowserRouter as Router, Link, Route  } from 'react-router-dom';
 import { Nav, Navbar, NavItem } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
@@ -15,28 +14,6 @@ import Routes from "./Routes";
 
 class App extends Component {
 
-state = {
-  animals: []
-}
-
-componentDidMount = () => {
-  axios.get('/api/test').then(response => {
-    this.setState({animals: response.data.animals})
-    console.log(response.data.animals)
-  })
-}
-
-rowStyle = {
-  display: 'grid',
-  width: '100vw',
-  gridTemplateColumns: '25% 25% 25% 25%' 
-
-}
-
-cardStyle = {
-  width: '25vw'
-
-}
 render() {
   return (
         <div id="App">
@@ -56,12 +33,14 @@ render() {
                   <Navbar.Collapse>
                     <Nav pullRight>
                         <Navbar.Toggle />
-                           <LinkContainer to="/signup">
-                            <NavItem>Signup</NavItem>
-                            </LinkContainer>
-                            
                             <LinkContainer to="/login">
-                            <NavItem>Login</NavItem>
+                            <NavItem> Already have an account? Click here to Login</NavItem>
+                            </LinkContainer>
+                            <LinkContainer to="/">
+                            <NavItem> Indecisive Pet Owner? Sign Up here!</NavItem>
+                            </LinkContainer>
+                            <LinkContainer to="/cards">
+                            <NavItem> Just want to see some pets? Click here</NavItem>
                             </LinkContainer>
                          </Nav>
                    </Navbar.Collapse>
@@ -74,13 +53,7 @@ render() {
                       <Route exact path="/" component={ FormPage } />
                       <Route exact path="/login" component= { logIn } />
                       <Route exact path="/confirmation" component= { textBox } />
-                      <div style={this.rowStyle}> 
-                        {this.state.animals.map(animal => 
-                          <div >
-                            <div style={this.cardStyle} className="col-lg-3"><PetCard name={animal.name} image={animal.photos[0] ? animal.photos[0].small : ''} species={animal.species} size={animal.size} gender={animal.gender} breed={animal.breeds.primary} /></div>
-                          </div>
-                        )}
-                      </div>
+                      <Route exact path="/cards" component= { PetCard } />
                       </div>
                 </Router>
             </div>
